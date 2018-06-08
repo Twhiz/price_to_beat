@@ -22,11 +22,11 @@ flight_data_raw['business'] = pd.DataFrame([1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,
 
 
 #%% Filter data according to travel policy
-def filter_flight(flight_data_raw,business = 0, airline == None):
+def filter_flight(flight_data_raw,business = 0, airline = None):
     if airline == None:
         return(flight_data_raw[flight_data_raw.business==business])
-        else:
-            flight_data_raw[flight_data_raw.airline==airline]
+    else:
+        flight_data_raw[flight_data_raw.airline==airline]
 
 
 flight_data_filtered = filter_flight(flight_data_raw,business=0)
